@@ -6,7 +6,6 @@ provider:
   runtime: provided
   timeout: 30
   region: eu-central-1
-  architecture: arm64
   ecr:
     images:
       appImage:
@@ -26,10 +25,10 @@ provider:
             - dynamodb:ListStreams
           Resource:
             - !GetAtt TodosTable.Arn
-            - !Join ['/', [!GetAtt TodosTable.Arn, 'stream/*']]
+            - !Join [ '/', [ !GetAtt TodosTable.Arn, 'stream/*' ] ]
 
 functions:
-  processTodo:
+  onCreateTodo:
     image:
       name: appImage
     command: on-create-todo
@@ -40,13 +39,14 @@ functions:
           batchSize: 1
           startingPosition: LATEST
           maximumRetryAttempts: 2
+          enabled: true
 
 resources:
   Resources:
     TodosTable:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: todos-${sls:stage}
+        TableName: todos
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
