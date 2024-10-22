@@ -7,6 +7,7 @@ environment:
 
 dependencies:
   aws_lambda_dart_runtime_ns: ^0.1.0
+  aws_dynamodb_api: ^2.0.0
 
 dev_dependencies:
   lints: ^3.0.0
