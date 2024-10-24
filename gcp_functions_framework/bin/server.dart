@@ -13,16 +13,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:example_protobuf_firestore/functions.dart' as function_library;
 import 'package:functions_framework/serve.dart';
+import 'package:gcp_functions_framework_firestore/functions.dart'
+    as function_library;
 
 Future<void> main(List<String> args) async {
   await serve(args, _nameToFunctionTarget);
 }
 
 FunctionTarget? _nameToFunctionTarget(String name) => switch (name) {
-      'function' => FunctionTarget.cloudEventWithContext(
-          function_library.function,
+      'onnewtodo' => FunctionTarget.cloudEventWithContext(
+          function_library.oncreatetodo,
         ),
       _ => null
     };

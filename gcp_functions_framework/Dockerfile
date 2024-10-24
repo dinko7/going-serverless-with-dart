@@ -1,3 +1,5 @@
+# Official Dart image: https://hub.docker.com/_/dart
+# Specify the Dart SDK base image version using dart:<version> (ex: dart:2.14)
 FROM dart:stable AS build
 
 # Resolve app dependencies.
@@ -20,4 +22,4 @@ COPY --from=build /app/bin/server /app/bin/
 
 # Start server.
 EXPOSE 8080
-ENTRYPOINT ["/app/bin/server", "--signature-type=cloudevent"]
+ENTRYPOINT ["/app/bin/server", "--target=oncreatetodo", "--signature-type=cloudevent"]

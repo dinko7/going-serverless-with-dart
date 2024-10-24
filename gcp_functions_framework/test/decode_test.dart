@@ -1,4 +1,4 @@
-import 'package:example_protobuf_firestore/src/function_types.dart';
+import 'package:gcp_functions_framework_firestore/src/function_types.dart';
 import 'package:test/test.dart';
 
 import 'test_shared.dart';
