@@ -4,4 +4,4 @@ This repo contains examples and source code for [Going Serverless with Dart](htt
 
 # Examples
 - Part 1: [AWS Lambda](https://dinkomarinac.dev/going-serverless-with-dart-aws-lambda-for-flutter-devs) [Example](https://github.com/dinko7/going-serverless-with-dart/tree/master/aws_lambda)
-- Part 2: [Google Cloud Platform]() [Example]()
+- Part 2: [Google Cloud Platform]() [Example](https://github.com/dinko7/going-serverless-with-dart/tree/master/gcp_functions_framework)
