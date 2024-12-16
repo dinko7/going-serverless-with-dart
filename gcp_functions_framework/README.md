@@ -110,6 +110,17 @@ Docker or deploy to Cloud Run, see these quick start guides:
 - [Quickstart: Docker]
 - [Quickstart: Cloud Run]
 
+## Deploy the function
+
+Use the steps outlined in the [article]() to grant the necessary permissions for deployment.
+
+Then, deploy the function to Cloud Run using Make:
+
+```shell
+$ make deploy
+$ make trigger
+```
+
 <!-- reference links -->
 [curl]: https://curl.se/docs/manual.html
 [Quickstart: Dart]: https://github.com/GoogleCloudPlatform/functions-framework-dart/blob/main/docs/quickstarts/01-quickstart-dart.md
