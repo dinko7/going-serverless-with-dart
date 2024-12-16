@@ -22,7 +22,7 @@ Future<void> main(List<String> args) async {
 }
 
 FunctionTarget? _nameToFunctionTarget(String name) => switch (name) {
-      'oncreatetodo' => FunctionTarget.cloudEventWithContext(
+      'oncreatetodo' => FunctionTarget.cloudEvent(
           function_library.oncreatetodo,
         ),
       _ => null
